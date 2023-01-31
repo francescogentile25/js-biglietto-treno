@@ -2,7 +2,7 @@
 const totKm = prompt("Quanti km è il tuo viaggio?")
 console.log (totKm);
 //Chiedere età passeggero
-const age = prompt('Quanti hanni hai ?')
+const age = prompt('Quanti anni hai ?')
 console.log (age);
 // definire costo per km e moltiplicarlo per i km che deve fare il passegero
 const priceKm = 0.21
