@@ -27,22 +27,46 @@ const discountYoungh = ((priceTravel / 100) * 20 )
 const priceTotalSenior =( priceTravel - discountSenior)
 const priceTotalYoungh= ( priceTravel - discountYoungh)
 let priceFinal
+//IF ELSE 
+// if (age >= 65){ 
+//     priceFinal = priceTotalSenior.toFixed(2)
+//     const cardPriceDiscountS =document.getElementById ('cardPriceDiscountS')
+//     cardPriceDiscountS.innerHTML= (  'Il tuo sconto è di ' + discountSenior.toFixed(2) + '&euro;' )
+//     const cardPriceFinalS= document.getElementById ('cardPriceFinalS')
+//     cardPriceFinalS.innerHTML = ('Il costo totale è di: '+priceTotalSenior.toFixed(2))
+//     console.log (priceFinal)
+// } else if (age < 18) {
+//     priceFinal = priceTotalYoungh.toFixed(2)
+//     const cardPriceDiscount =document.getElementById ('cardPriceDiscountY')
+//     cardPriceDiscount.innerHTML= (  'Il tuo sconto è di ' + discountYoungh.toFixed(2) + '&euro;' )
+//     const cardPriceFinalY= document.getElementById ('cardPriceFinalY')
+//     cardPriceFinalY.innerHTML = ('Il costo totale è di: '+priceTotalYoungh.toFixed(2) + '&euro;')
+//     console.log (priceFinal)
+// }else{
+//     priceFinal =  priceTravel.toFixed(2)
+//     console.log (priceFinal)
+// }
 
-if (age >= 65){ 
-    priceFinal = priceTotalSenior.toFixed(2)
-    const cardPriceDiscountS =document.getElementById ('cardPriceDiscountS')
-    cardPriceDiscountS.innerHTML= (  'Il tuo sconto è di ' + discountSenior.toFixed(2) + '&euro;' )
-    const cardPriceFinalS= document.getElementById ('cardPriceFinalS')
-    cardPriceFinalS.innerHTML = ('Il costo totale è di: '+priceTotalSenior.toFixed(2))
-    console.log (priceFinal)
-} else if (age < 18) {
-    priceFinal = priceTotalYoungh.toFixed(2)
-    const cardPriceDiscount =document.getElementById ('cardPriceDiscountY')
-    cardPriceDiscount.innerHTML= (  'Il tuo sconto è di ' + discountYoungh.toFixed(2) + '&euro;' )
-    const cardPriceFinalY= document.getElementById ('cardPriceFinalY')
-    cardPriceFinalY.innerHTML = ('Il costo totale è di: '+priceTotalYoungh.toFixed(2) + '&euro;')
-    console.log (priceFinal)
-}else{
-    priceFinal =  priceTravel.toFixed(2)
-    console.log (priceFinal)
+
+//SWITCH
+switch (true) {
+    case age >= 65:
+        priceFinal = priceTotalSenior.toFixed(2);
+        const cardPriceDiscountS = document.getElementById("cardPriceDiscountS");
+        cardPriceDiscountS.innerHTML = "Il tuo sconto è di " + discountSenior.toFixed(2) + "&euro;";
+        const cardPriceFinalS = document.getElementById("cardPriceFinalS");
+        cardPriceFinalS.innerHTML = "Il costo totale è di: " + priceTotalSenior.toFixed(2);
+        console.log(priceFinal);
+        break;
+    case age < 18:
+        priceFinal = priceTotalYoungh.toFixed(2);
+        const cardPriceDiscount = document.getElementById("cardPriceDiscountY");
+        cardPriceDiscount.innerHTML = "Il tuo sconto è di " + discountYoungh.toFixed(2) + "&euro;";
+        const cardPriceFinalY = document.getElementById("cardPriceFinalY");
+        cardPriceFinalY.innerHTML = "Il costo totale è di: " + priceTotalYoungh.toFixed(2) + "&euro;";
+        console.log(priceFinal);
+        break;
+    default:
+        priceFinal = priceTravel.toFixed(2);
+        console.log(priceFinal);
 }
