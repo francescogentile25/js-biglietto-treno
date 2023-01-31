@@ -55,7 +55,7 @@ switch (true) {
         const cardPriceDiscountS = document.getElementById("cardPriceDiscountS");
         cardPriceDiscountS.innerHTML = "Il tuo sconto è di " + discountSenior.toFixed(2) + "&euro;";
         const cardPriceFinalS = document.getElementById("cardPriceFinalS");
-        cardPriceFinalS.innerHTML = "Il costo totale è di: " + priceTotalSenior.toFixed(2);
+        cardPriceFinalS.innerHTML = "Il costo totale è di: " + priceTotalSenior.toFixed(2) + "&euro;";
         console.log(priceFinal);
         break;
     case age < 18:
